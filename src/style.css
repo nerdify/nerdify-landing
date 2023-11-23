@@ -1,0 +1,132 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Custom */
+  --light-color: #ffffff
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--light-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--light-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  min-height: calc(100dvh - 80px);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background::before {
+  content: "";
+  width: 100%;
+  position: absolute;  
+  height: 100vh;
+  mask-image: radial-gradient(50.00% 99.80% at 50.00% 47.90%, black 0%, rgba(0, 0, 0, 0) 95%);
+  -webkit-mask-image: radial-gradient(50.00% 99.80% at 50.00% 47.90%, black 0%, rgba(0, 0, 0, 0) 95%);
+  background-image: radial-gradient(rgba(255, 228, 204, 0.689) 1.5px,transparent 1.5px);
+  background-size: 23px 23px;
+}
+
+.button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D0D5DD;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.rocket {
+  background-color: var(--light-color);
+  display: flex;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-title {
+  font-size: clamp(44px, 4vw, 80px);
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  max-width: 740px;
+  padding: 0 20px;
+}
+
+.description p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  color: #4B5563  ;
+}
+
+
+.heading-title--gradient {
+  color: transparent;
+  background: -webkit-linear-gradient(0deg,#FFC200, #FF7900);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.release-date {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding-block: 12px;
+  padding-inline: 20px;
+}
